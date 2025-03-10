@@ -35,8 +35,8 @@ if page == "Form laporan":
 elif page == "Daftar Laporan":
     
     if st.session_state.laporan.get_all_laporan():
-        st.write("Berikut adalah daftar laporan sepeda motor hilang:")
-        
+        st.write("Berikut adalah daftar laporan sepeda motor yang hilang:")
+
         for i, laporan in enumerate(st.session_state.laporan.get_all_laporan(), start=1):
             st.subheader(f"Laporan #{i}")
             st.write(f"**Tanggal Kejadian:** {laporan.tanggal}")
